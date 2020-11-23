@@ -1,15 +1,18 @@
 $(function() {
     $(".eat-burger").on("click", function(event) {
       var id = $(this).data("id");
-      var eaten = true;
+      var eaten = $(this).data("newdevoured");
 
-      var devoured = {
+      console.log(id);
+      console.log(eaten);
+
+      var newEat= {
         devoured: eaten
       };
   
       $.ajax("/api/burgers/" + id, {
         type: "PUT",
-        data: devoured
+        data: newEat
       }).then(
         function() {
           console.log("Changed devoured to: ", eaten)
@@ -25,7 +28,8 @@ $(".create-form").on("submit", function(event) {
     event.preventDefault();
 
     var newBurger = {
-      burger: $("#newBurger").val().trim()
+      burger_name: $("#newBurger").val().trim(),
+      devoured: false
     };
 
     $.ajax("/api/burgers", {
