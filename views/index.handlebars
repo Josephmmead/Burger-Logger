@@ -1,5 +1,49 @@
-<ul>
-    {{#each burgers}}
-   <l1>{{this.burger_name}}</l1>
-    {{/each}}
-</ul>
+<div class="container" id="container">
+    <div class="jumbotron" id="header">
+        <h1 id="eat"><strong>Burger Logger!</strong></h1>
+        <img src="../public/assets/img/bacon-burger.png" id="burger">
+    </div>
+
+    <div id="wrapper">
+
+        <h2>Burgers to be devoured</h2>
+        <ul>
+            {{#each burgers}}
+            {{#unless  devoured}}
+            <li>{{this.burger_name}}</li>
+            {{/unless}}
+            {{/each}}
+        </ul>
+
+
+
+
+        <h2>Devoured Burgers</h2>
+
+        <ul>
+            {{#each burgers}}
+            {{#if  devoured}}
+            <l1>{{this.burger_name}}</l1>
+            {{/if}}
+            {{/each}}
+        </ul>
+
+
+        <h2>Add a burger</h2>
+        <form class="create-form">
+
+            <div class="form-group">
+                <label for="burger">Type of Burger:</label>
+                <input type="text" id="burger" name="name">
+            </div>
+
+            <div class="form-group">
+                <label for="devour">Have you eaten this burger?</label><br>
+                <input type="radio" name="devoured" value="1" checked> Devoured!<br>
+                <input type="radio" name="devoured" value="0"> undevoured
+            </div>
+
+            <button type="submit">Add a burger</button>
+        </form>
+
+    </div>
