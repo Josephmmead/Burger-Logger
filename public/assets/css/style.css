@@ -1,13 +1,10 @@
 .wrapper{
     background-color: #ffbf80;
 }
-
 #title{
     position: center;
 }
-
 #burger {
-
     display: block;
     margin-left: auto;
     margin-right: auto;
