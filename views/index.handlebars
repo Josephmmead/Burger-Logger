@@ -1,8 +1,10 @@
 <div class="wrapper">
 
     <div class="jumbotron ">
-        <h1 class="display-4 ">Burger Logger!</h1>
-        <p class="lead">This is a simple simple app that allows you to add burgers and then eat them!</p>
+
+        <h1 class="display-4 " id="main"><strong>Burger Logger!</strong></h1>
+        <p class="lead"><strong>This is a simple simple app that allows you to add burgers and then eat them!</strong>
+        </p>
         <hr class="my-4">
         <img src="https://raw.githubusercontent.com/Josephmmead/Burger-Logger/main/public/assets/img/bacon-burger.png"
             id="burger">
@@ -43,19 +45,20 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-5">
+                <div id="new">
+                    <h2>Add a burger</h2>
+                    <form class="create-form">
 
-                <h2>Add a burger</h2>
-                <form class="create-form">
+                        <div class="form-group">
+                            <label for="burger">Type of Burger:</label>
+                            <input type="text" id="newBurger" name="burger">
+                        </div>
 
-                    <div class="form-group">
-                        <label for="burger">Type of Burger:</label>
-                        <input type="text" id="newBurger" name="burger">
-                    </div>
+                        <button type="submit">Add a burger</button>
+                    </form>
 
-                    <button type="submit">Add a burger</button>
-                </form>
-
-                <br>
+                    <br>
+                </div>
             </div>
         </div>
     </div>
