@@ -8,14 +8,14 @@ router.get("/", function(req, res){
 });
 
 
-router.post("/burgers/create", function(req, res){
+router.post("/api/burgers", function(req, res){
     burger.create(req.body.burger_name, function(results){
         console.log(results);
         res.redirect("/")
     })
 })
 
-router.put("/burgers/:id", function(req, res){
+router.put("/api/burgers/:id", function(req, res){
     burger.update(req.params.id, function(results){
         console.log(results);
         res.sendStatus(200)
